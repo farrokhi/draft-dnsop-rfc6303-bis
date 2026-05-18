@@ -53,10 +53,10 @@ This document updates RFC 6063 and RFC 6890.
 This document changes the registration policy for
 that registry from "IETF Review" to "Expert Review".
 
-Also, this document updates IP Special-Purpose Address Space registries {{!RFC6890}} to indicate whether
+Also, this document updates IP Special-Purpose Address Space registries [@!RFC6890] to indicate whether
 an IP address block is eligible to be in Locally-Served DNS Zones. This change is meant
 to ensure consistent registrations between the above registries and future failures
-to make appropriate registrations in "IPv6 Locally-Served DNS Zone" such as in {{!RFC9637}}.
+to make appropriate registrations in "IPv6 Locally-Served DNS Zone" such as in [@!RFC9637].
 
 
 PLEASE REMOVE THE FOLLOWING PARAGRAPH BEFORE PUBLISHING:
@@ -69,16 +69,15 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this
 document are to be interpreted as described in BCP 14 [@!RFC2119] [@RFC8174]
 when, and only when, they appear in all capitals, as shown here.
-DNS terminology is as described in [@?RFC8499].
+DNS terminology is as described in [@?RFC9499].
 
 # Updates to RFC 6063 {#updates-6063}
 
-Please update {{Section 8 of @!RFC6303}} "IANA Considerations" as follows:
+Please update [@!RFC6303, section 8] "IANA Considerations" as follows:
 
 OLD:
 
-{:quote}
->   This registry can be amended through "IETF Review" as per {{?RFC5226}}.
+>   This registry can be amended through "IETF Review" as per [@!RFC5226].
 >   As part of this review process, it should be noted that once a zone
 >   is added it is effectively added permanently; once an address range
 >   starts being configured as a local zone in systems on the Internet,
@@ -87,13 +86,12 @@ OLD:
 
 NEW:
 
-{:quote}
->  This registry can be amended through "Expert Review" policy ({{Section 4.5 of !RFC8126}}).
+>  This registry can be amended through "Expert Review" policy ([@!RFC8126, section 4.5]).
 >  As part of this review process, it should be noted that once a zone
 >  is added it is effectively added permanently; once an address range
 >  starts being configured as a local zone in systems on the Internet,
 >  it will be impossible to reverse those changes. More guidance for Designated
->  Experts is provided in {{guidance}} of THIS_DOCUMENT.
+>  Experts is provided in [guidance](#guidance) of THIS_DOCUMENT.
 
 ## Guidance for Designated Experts {#guidance}
 
@@ -108,7 +106,7 @@ Here are some examples (not all mandatory) on what the Reviewer should look for:
 
 IANA is requested to add the zones listed below to the "IPv6 Locally-Served DNS Zone" registry:
 
-TBC with {{!RFC9637}} entries.
+TBC with [@!RFC9637] entries.
 
 # Changes to the IP Special-Purpose Space Registries {#updates-6890}
 
@@ -154,11 +152,11 @@ TBC.
 
 # Security Considerations
 
-This document does not add new security risks other than those already discussed in {{RFC6303}}, {{!RFC6890}}, and {{!RFC9637}}.
+This document does not add new security risks other than those already discussed in [[@!RFC6303], [@!RFC6890], and [@!RFC9637].
 
 # IANA Considerations
 
-Sections 6063-updates and 6890-updates include actions for IANA. These actions are not repeated here.
+Sections [6063 Updates](#updates-6063) and [6890 Updates](#updates-6890) include actions for IANA. These actions are not repeated here.
 
 {backmatter}
 

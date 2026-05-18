@@ -4,15 +4,15 @@
 
 
 DNSOP                                                   T. Wicinski, Ed.
-Internet-Draft                                              2 March 2026
+Internet-Draft                                               18 May 2026
 Updates: 6603, 6890 (if approved)                                       
 Intended status: Best Current Practice                                  
-Expires: 3 September 2026
+Expires: 19 November 2026
 
 
 Updates to Locally Served DNS Zones and IP Special-Purpose Address Space
                                Registries
-                       draft-dnsop-rfc6303-bis-01
+                       draft-dnsop-rfc6303-bis-02
 
 Abstract
 
@@ -43,7 +43,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2026.
+   This Internet-Draft will expire on 19 November 2026.
 
 Copyright Notice
 
@@ -54,9 +54,9 @@ Copyright Notice
 
 
 
-Wicinski                Expires 3 September 2026                [Page 1]
+Wicinski                Expires 19 November 2026                [Page 1]
 
-Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
+Internet-Draft        Updates to RFCs 6303 and 6890             May 2026
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -80,14 +80,14 @@ Table of Contents
      4.2.  Eligible to Locally-Served DNS Zones Note . . . . . . . .   4
      4.3.  IPv6 Locally-Served DNS Zone Registry Note  . . . . . . .   4
      4.4.  IPv4 Locally-Served DNS Zone Registry Note  . . . . . . .   4
-     4.5.  Initial IPv6 Locally-Served DNS Zone Registry . . . . . .   5
+     4.5.  Initial IPv6 Locally-Served DNS Zone Registry . . . . . .   4
      4.6.  Initial IPv4 Locally-Served DNS Zone Registry . . . . . .   5
    5.  Operational Considerations  . . . . . . . . . . . . . . . . .   5
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
    7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      8.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+     8.2.  Informative References  . . . . . . . . . . . . . . . . .   6
    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   6
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
@@ -99,20 +99,20 @@ Table of Contents
    that registry from "IETF Review" to "Expert Review".
 
    Also, this document updates IP Special-Purpose Address Space
-   registries {{!RFC6890}} to indicate whether an IP address block is
+   registries [RFC6890] to indicate whether an IP address block is
    eligible to be in Locally-Served DNS Zones.  This change is meant to
    ensure consistent registrations between the above registries and
    future failures to make appropriate registrations in "IPv6 Locally-
-   Served DNS Zone" such as in {{!RFC9637}}.
+   Served DNS Zone" such as in [RFC9637].
 
 
 
 
 
 
-Wicinski                Expires 3 September 2026                [Page 2]
+Wicinski                Expires 19 November 2026                [Page 2]
 
-Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
+Internet-Draft        Updates to RFCs 6303 and 6890             May 2026
 
 
    PLEASE REMOVE THE FOLLOWING PARAGRAPH BEFORE PUBLISHING: The source
@@ -127,19 +127,17 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
    "OPTIONAL" in this document are to be interpreted as described in BCP
    14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.  DNS terminology is as described in
-   [RFC8499].
+   [RFC9499].
 
 3.  Updates to RFC 6063
 
-   Please update {{Section 8 of @!RFC6303}} "IANA Considerations" as
+   Please update Section 8 of [RFC6303] "IANA Considerations" as
    follows:
 
    OLD:
 
-   {:quote}
-
    |  This registry can be amended through "IETF Review" as per
-   |  {{?RFC5226}}.  As part of this review process, it should be noted
+   |  [RFC5226].  As part of this review process, it should be noted
    |  that once a zone is added it is effectively added permanently;
    |  once an address range starts being configured as a local zone in
    |  systems on the Internet, it will be impossible to reverse those
@@ -147,15 +145,13 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
 
    NEW:
 
-   {:quote}
-
    |  This registry can be amended through "Expert Review" policy
-   |  ({{Section 4.5 of !RFC8126}}).  As part of this review process, it
+   |  (Section 4.5 of [RFC8126]).  As part of this review process, it
    |  should be noted that once a zone is added it is effectively added
    |  permanently; once an address range starts being configured as a
    |  local zone in systems on the Internet, it will be impossible to
    |  reverse those changes.  More guidance for Designated Experts is
-   |  provided in {{guidance}} of THIS_DOCUMENT.
+   |  provided in guidance (#guidance) of THIS_DOCUMENT.
 
 3.1.  Guidance for Designated Experts
 
@@ -163,25 +159,24 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
    additional guidance.  Here are some examples (not all mandatory) on
    what the Reviewer should look for:
 
-
-
-
-Wicinski                Expires 3 September 2026                [Page 3]
-
-Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
-
-
    1.  Should have at least an internet-draft written which can explain
        the usage.
 
    2.  The various Working Groups in the IETF should have
+
+
+
+Wicinski                Expires 19 November 2026                [Page 3]
+
+Internet-Draft        Updates to RFCs 6303 and 6890             May 2026
+
 
 3.2.  Changes to the IPv6 Locally-Served DNS Zones Registry
 
    IANA is requested to add the zones listed below to the "IPv6 Locally-
    Served DNS Zone" registry:
 
-   TBC with {{!RFC9637}} entries.
+   TBC with [RFC9637] entries.
 
 4.  Changes to the IP Special-Purpose Space Registries
 
@@ -219,17 +214,18 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
       Served DNS Zones" set to "True" in the IPv4 Locally-Served DNS
       Zone Registry.
 
-
-
-
-Wicinski                Expires 3 September 2026                [Page 4]
-
-Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
-
-
 4.5.  Initial IPv6 Locally-Served DNS Zone Registry
 
    TBC.
+
+
+
+
+
+Wicinski                Expires 19 November 2026                [Page 4]
+
+Internet-Draft        Updates to RFCs 6303 and 6890             May 2026
+
 
 4.6.  Initial IPv4 Locally-Served DNS Zone Registry
 
@@ -242,12 +238,12 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
 6.  Security Considerations
 
    This document does not add new security risks other than those
-   already discussed in {{RFC6303}}, {{!RFC6890}}, and {{!RFC9637}}.
+   already discussed in [[RFC6303], [RFC6890], and [RFC9637].
 
 7.  IANA Considerations
 
-   Sections 6063-updates and 6890-updates include actions for IANA.
-   These actions are not repeated here.
+   Sections 6063 Updates (#updates-6063) and 6890 Updates (#updates-
+   6890) include actions for IANA.  These actions are not repeated here.
 
 8.  References
 
@@ -258,9 +254,38 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
+   [RFC5226]  Narten, T. and H. Alvestrand, "Guidelines for Writing an
+              IANA Considerations Section in RFCs", RFC 5226,
+              DOI 10.17487/RFC5226, May 2008,
+              <https://www.rfc-editor.org/info/rfc5226>.
+
    [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163,
               RFC 6303, DOI 10.17487/RFC6303, July 2011,
               <https://www.rfc-editor.org/info/rfc6303>.
+
+   [RFC6890]  Cotton, M., Vegoda, L., Bonica, R., Ed., and B. Haberman,
+              "Special-Purpose IP Address Registries", BCP 153,
+              RFC 6890, DOI 10.17487/RFC6890, April 2013,
+              <https://www.rfc-editor.org/info/rfc6890>.
+
+   [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
+              Writing an IANA Considerations Section in RFCs", BCP 26,
+              RFC 8126, DOI 10.17487/RFC8126, June 2017,
+              <https://www.rfc-editor.org/info/rfc8126>.
+
+
+
+
+
+
+Wicinski                Expires 19 November 2026                [Page 5]
+
+Internet-Draft        Updates to RFCs 6303 and 6890             May 2026
+
+
+   [RFC9637]  Huston, G. and N. Buraglio, "Expanding the IPv6
+              Documentation Space", RFC 9637, DOI 10.17487/RFC9637,
+              August 2024, <https://www.rfc-editor.org/info/rfc9637>.
 
 8.2.  Informative References
 
@@ -268,20 +293,9 @@ Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [RFC8499]  Hoffman, P., Sullivan, A., and K. Fujiwara, "DNS
-              Terminology", RFC 8499, DOI 10.17487/RFC8499, January
-              2019, <https://www.rfc-editor.org/info/rfc8499>.
-
-
-
-
-
-
-
-Wicinski                Expires 3 September 2026                [Page 5]
-
-Internet-Draft        Updates to RFCs 6303 and 6890           March 2026
-
+   [RFC9499]  Hoffman, P. and K. Fujiwara, "DNS Terminology", BCP 219,
+              RFC 9499, DOI 10.17487/RFC9499, March 2024,
+              <https://www.rfc-editor.org/info/rfc9499>.
 
 Acknowledgements
 
@@ -320,19 +334,5 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Wicinski                Expires 3 September 2026                [Page 6]
+Wicinski                Expires 19 November 2026                [Page 6]
 ```
